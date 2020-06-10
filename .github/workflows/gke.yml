@@ -20,7 +20,7 @@ env:
   GKE_EMAIL: ${{ secrets.GKE_EMAIL }}
   GITHUB_SHA: ${{ github.sha }}
   GKE_ZONE: europe-west2-b
-  GKE_CLUSTER: turtleside
+  GKE_CLUSTER: turtleside-staging
   IMAGE: quote
   REGISTRY_HOSTNAME: gcr.io
   DEPLOYMENT_NAME: quote
