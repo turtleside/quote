@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ${DEPLOYMENT_NAME}-ingress
+spec:
+  tls:
+    - hosts:
+        - ${HOST_NAME}
+      secretName: ${SECRET_NAME}
+  rules:
+    - host: ${HOST_NAME}
+      http:
+        paths:
+          - path: ${RESOURCE_PATH}
+            backend:
+              serviceName: ${DEPLOYMENT_NAME}-svc
+              servicePort: 80
+

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${DEPLOYMENT_NAME}
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ${DEPLOYMENT_NAME}
+  template:
+    metadata:
+      name: ${DEPLOYMENT_NAME}
+      namespace: default
+      labels:
+        app: ${DEPLOYMENT_NAME}
+    spec:
+      containers:
+        - name: ${DEPLOYMENT_NAME}-app
+          image: $REGISTRY_HOSTNAME/$GKE_PROJECT/$IMAGE:${GITHUB_SHA}
+          ports:
+            - containerPort: 8080
+      dnsPolicy: Default

@@ -1,0 +1,39 @@
+{
+  "name": "quote",
+  "version": "1.0.0",
+  "description": "API quote",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node src/index.js",
+    "dev": "nodemon --exec 'babel-node src/index.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turtleside/syndicate.git"
+  },
+  "keywords": [
+    "API",
+    "quote"
+  ],
+  "author": "wonkledge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/turtleside/syndicate/issues"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.1",
+    "@babel/node": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "@wonkledge/okatsu": "0.0.8",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.18",
+    "uuid": "^8.1.0"
+  },
+  "homepage": "https://github.com/turtleside/syndicate#readme"
+}

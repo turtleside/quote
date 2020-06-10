@@ -1,0 +1,2 @@
+# syndicate
+API for syndicate
