@@ -21,7 +21,7 @@ env:
   GITHUB_SHA: ${{ github.sha }}
   GKE_ZONE: europe-west2-b
   GKE_CLUSTER: turtleside
-  IMAGE: syndicate
+  IMAGE: quote
   REGISTRY_HOSTNAME: gcr.io
   DEPLOYMENT_NAME: quote
   RESOURCE_PATH: /quote
