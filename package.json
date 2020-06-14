@@ -29,7 +29,7 @@
     "nodemon": "^2.0.4"
   },
   "dependencies": {
-    "@wonkledge/okatsu": "0.0.8",
+    "@wonkledge/okatsu": "0.0.9",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.18",

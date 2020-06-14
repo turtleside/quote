@@ -1,10 +1,9 @@
-import sendResponse from "@wonkledge/okatsu/lib/response";
+import {sendResponse} from "@wonkledge/okatsu/lib/response";
 import {feature} from "@wonkledge/okatsu/lib/promise";
-import query from "@wonkledge/okatsu/lib/mongooseAdapter";
+import {query} from "@wonkledge/okatsu/lib/mongooseAdapter";
 import Quote from "./model";
-import mapFields from "@wonkledge/okatsu/lib/datamapper";
-import checkParameters from '@wonkledge/okatsu/lib/validator';
-
+import {mapFields} from "@wonkledge/okatsu/lib/datamapper";
+import {checkParameters} from '@wonkledge/okatsu/lib/validator';
 
 const allStatus = ['ongoing', 'accepted', 'refused', 'closed'];
 
@@ -25,7 +24,9 @@ const validators = [
 ];
 
 const fetchQuote = (params) => {
-    return Quote.find(params);
+    console.log(params.status);
+    const searchCondition = params.status ? { 'state.status': params.status } : {};
+    return Quote.find(searchCondition);
 };
 
 const getAll = (req, res) => {

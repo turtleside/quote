@@ -1,2 +1,2 @@
 # syndicate
-API for syndicate
+API for quote
