@@ -11,7 +11,7 @@ const port = process.env.APPLICATION_PORT
 const app = express();
 
 app.use(express.json());
-
+app.use(express.static('public'));
 app.use(resourcePath, router);
 
 app.listen(port, () => {
