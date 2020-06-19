@@ -18,6 +18,9 @@ spec:
       containers:
         - name: ${DEPLOYMENT_NAME}-app
           image: $REGISTRY_HOSTNAME/$GKE_PROJECT/$IMAGE:${GITHUB_SHA}
+          env:
+            - name: TOTO
+              value: "rewrite by this one"
           ports:
             - containerPort: 8080
       dnsPolicy: Default

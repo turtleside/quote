@@ -5,6 +5,7 @@ import poolDb from './poolDb';
 
 dotenv.config();
 
+console.log(process.env.TOTO);
 const resourcePath = process.env.RESOURCE_PATH
 const port = process.env.APPLICATION_PORT
 
